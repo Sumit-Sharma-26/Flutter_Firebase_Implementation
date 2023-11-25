@@ -8,7 +8,6 @@ class FirebaseAuthService {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<User?> signUpWithEmailAndPassword(String email, String password) async{
-
     try {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       return credential.user;
